@@ -1,180 +1,67 @@
 eric vinicius do nascimento pereire
 1a formacao de docentes
-:root {
-    --bg-color: #f8f9fa;
-    --text-color: #212529;
-    --header-bg: #ffffff;
-    --card-bg: #ffffff;
-    --primary-color: #0d6efd;
-    --border-color: #dee2e6;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    --transition: all 0.25s ease-in-out;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Projeto Web GitHub</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-[data-theme="dark"] {
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --header-bg: #1e1e1e;
-    --card-bg: #1e1e1e;
-    --primary-color: #bb86fc;
-    --border-color: #2d2d2d;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
+    <header>
+        <div class="logo">MeuProjeto.git</div>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" aria-label="Alternar entre modo claro e escuro">🌓 Alternar Tema</button>
+    </header>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <main>
+        <section id="inicio" class="hero">
+            <h1>Bem-vindo ao Meu Projeto Web</h1>
+            <p>Esta é uma página moderna criada para o GitHub, com suporte a modo escuro e design responsivo.</p>
+            <a href="#sobre" class="btn">Saiba Mais</a>
+        </section>
 
-html {
-    scroll-behavior: smooth;
-}
+        <section id="sobre" class="container">
+            <h2>Sobre o Projeto</h2>
+            <p>Este repositório serve como uma base sólida para quem deseja iniciar no desenvolvimento web. Ele utiliza HTML5 estruturado, CSS3 moderno com variáveis e JavaScript vanilla.</p>
+        </section>
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    transition: var(--transition);
-}
+        <section id="recursos" class="container text-center">
+            <h2>O que este projeto inclui?</h2>
+            <div class="grid">
+                <article class="card">
+                    <h3>HTML5 Semântico</h3>
+                    <p>Código limpo, organizado e otimizado para motores de busca (SEO).</p>
+                </article>
+                <article class="card">
+                    <h3>CSS Moderno</h3>
+                    <p>Uso de Flexbox, Grid Layout e variáveis para fácil customização.</p>
+                </article>
+                <article class="card">
+                    <h3>Modo Escuro</h3>
+                    <p>Interatividade nativa com JavaScript para alternar o tema visual.</p>
+                </article>
+            </div>
+        </section>
+    </main>
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    background-color: var(--header-bg);
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
+    <footer>
+        <p>&copy; 2026 Meu Projeto GitHub. Feito com 💻 e ☕ por Eric Vinicius.</p>
+    </footer>
 
-.logo {
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: var(--primary-color);
-}
+    <script src="script.js"></script>
+</body>
+</html>
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 1.5rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-nav a:hover {
-    color: var(--primary-color);
-}
-
-#theme-toggle {
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    background: transparent;
-    color: var(--text-color);
-    cursor: pointer;
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-#theme-toggle:hover {
-    background-color: var(--text-color);
-    color: var(--bg-color);
-}
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 6rem 1rem;
-    background: linear-gradient(135deg, #0d6efd, #6610f2);
-    color: white;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.75rem 2rem;
-    background-color: white;
-    color: #0d6efd;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 700;
-    transition: var(--transition);
-    box-shadow: var(--shadow);
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
-.container {
-    padding: 4rem 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.card {
-    background-color: var(--card-bg);
-    padding: 2.5rem 2rem;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    text-align: left;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-}
-
-.card h3 {
-    margin-bottom: 0.75rem;
-    color: var(--primary-color);
-}
-
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--header-bg);
-    border-top: 1px solid var(--border-color);
-    margin-top: 4rem;
-    font-size: 0.9rem;
-    transition: var(--transition);
-}
 
